@@ -1,0 +1,173 @@
+
+local ScreenGui = Instance.new("ScreenGui")
+local Background = Instance.new("Frame")
+local AurumName = Instance.new("TextLabel")
+local UserName = Instance.new("TextLabel")
+local person = Instance.new("ImageButton")
+local Gradient = Instance.new("Frame")
+local UIGradient = Instance.new("UIGradient")
+local UICorner = Instance.new("UICorner")
+local EnterKey = Instance.new("TextBox")
+local SubmitButton = Instance.new("TextButton")
+local Shadow = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local PleaseInput = Instance.new("TextLabel")
+local GetKey = Instance.new("TextButton")
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Background.Name = "Background"
+Background.Parent = ScreenGui
+Background.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Background.BorderColor3 = Color3.fromRGB(47, 255, 0)
+Background.BorderSizePixel = 0
+Background.Position = UDim2.new(0.279529274, 0, 0.255905509, 0)
+Background.Size = UDim2.new(0, 428, 0, 247)
+
+AurumName.Name = "AurumName"
+AurumName.Parent = Background
+AurumName.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+AurumName.BorderSizePixel = 0
+AurumName.Position = UDim2.new(0.109813087, 0, 0.0242914986, 0)
+AurumName.Size = UDim2.new(0, 333, 0, 38)
+AurumName.Font = Enum.Font.GothamBold
+AurumName.Text = "OxideCore.lua"
+AurumName.TextColor3 = Color3.fromRGB(180, 180, 180)
+AurumName.TextSize = 29.000
+AurumName.TextWrapped = true
+
+UserName.Name = "UserName"
+UserName.Parent = Background
+UserName.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+UserName.BorderSizePixel = 0
+UserName.Position = UDim2.new(0.065420568, 0, 0.898785412, 0)
+UserName.Size = UDim2.new(0, 46, 0, 18)
+UserName.Font = Enum.Font.GothamBold
+UserName.Text = "User"
+UserName.TextColor3 = Color3.fromRGB(180, 180, 180)
+UserName.TextSize = 13.000
+UserName.TextWrapped = true
+
+person.Name = "person"
+person.Parent = Background
+person.BackgroundTransparency = 1.000
+person.LayoutOrder = 1
+person.Position = UDim2.new(0.0140186911, 0, 0.878542483, 0)
+person.Size = UDim2.new(0, 22, 0, 23)
+person.ZIndex = 2
+person.Image = "rbxassetid://3926307971"
+person.ImageRectOffset = Vector2.new(884, 4)
+person.ImageRectSize = Vector2.new(36, 36)
+
+Gradient.Name = "Gradient"
+Gradient.Parent = Background
+Gradient.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gradient.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Gradient.BorderSizePixel = 0
+Gradient.Position = UDim2.new(-0.00266337395, 0, 0.176527798, 0)
+Gradient.Size = UDim2.new(0, 428, 0, 1)
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(48, 116, 224)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(35, 168, 157))}
+UIGradient.Parent = Gradient
+
+UICorner.CornerRadius = UDim.new(0, 4)
+UICorner.Parent = Gradient
+
+EnterKey.Name = "EnterKey"
+EnterKey.Parent = Background
+EnterKey.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+EnterKey.BorderColor3 = Color3.fromRGB(31, 0, 1)
+EnterKey.BorderSizePixel = 0
+EnterKey.Position = UDim2.new(0.205607474, 0, 0.421052635, 0)
+EnterKey.Size = UDim2.new(0, 252, 0, 40)
+EnterKey.Font = Enum.Font.SourceSansBold
+EnterKey.Text = "Hello Mr"
+EnterKey.TextColor3 = Color3.fromRGB(177, 177, 177)
+EnterKey.TextSize = 22.000
+EnterKey.TextWrapped = true
+
+SubmitButton.Name = "SubmitButton"
+SubmitButton.Parent = Background
+SubmitButton.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+SubmitButton.BorderSizePixel = 0
+SubmitButton.Position = UDim2.new(0.329439223, 0, 0.653846145, 0)
+SubmitButton.Size = UDim2.new(0, 143, 0, 35)
+SubmitButton.ZIndex = 2
+SubmitButton.Font = Enum.Font.GothamMedium
+SubmitButton.Text = ""
+SubmitButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+SubmitButton.TextScaled = true
+SubmitButton.TextSize = 14.000
+SubmitButton.TextWrapped = true
+SubmitButton.MouseButton1Click:Connect(function()
+	if EnterKey.Text == "ENEUCZ305B" then
+		Background.Visible = false
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/fliskScript/OxidCore.lua/main/script"))()
+	else
+		game.StarterGui:SetCore("SendNotification", {Title = "Wrong Key!", Text = "Use 'Get Key'", Icon = "", Duration = 4})
+	end
+end)
+Shadow.Name = "Shadow"
+Shadow.Parent = SubmitButton
+Shadow.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Shadow.BorderSizePixel = 0
+Shadow.Size = UDim2.new(1, 0, 1, 4)
+
+TextLabel.Parent = SubmitButton
+TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.496503502, 0, 0.5, 0)
+TextLabel.Size = UDim2.new(1.02097905, -20, 1.28571427, -20)
+TextLabel.ZIndex = 2
+TextLabel.Font = Enum.Font.GothamMedium
+TextLabel.Text = "Submit"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+PleaseInput.Name = "PleaseInput"
+PleaseInput.Parent = Background
+PleaseInput.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+PleaseInput.BorderSizePixel = 0
+PleaseInput.Position = UDim2.new(0.329439253, 0, 0.255060732, 0)
+PleaseInput.Size = UDim2.new(0, 143, 0, 29)
+PleaseInput.Font = Enum.Font.GothamBold
+PleaseInput.Text = "Input key"
+PleaseInput.TextColor3 = Color3.fromRGB(180, 180, 180)
+PleaseInput.TextSize = 29.000
+PleaseInput.TextWrapped = true
+
+GetKey.Name = "GetKey"
+GetKey.Parent = Background
+GetKey.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+GetKey.BackgroundTransparency = 1.000
+GetKey.BorderColor3 = Color3.fromRGB(40, 40, 40)
+GetKey.BorderSizePixel = 0
+GetKey.Position = UDim2.new(0.383177578, 0, 0.846153855, 0)
+GetKey.Size = UDim2.new(0, 102, 0, 31)
+GetKey.Font = Enum.Font.Unknown
+GetKey.Text = "Get key"
+GetKey.TextColor3 = Color3.fromRGB(180, 180, 180)
+GetKey.TextSize = 14.000
+GetKey.TextWrapped = true
+GetKey.MouseButton1Click:Connect(function()
+	setclipboard("https://discord.gg/EutZaFKCrX")
+	wait(1)
+	game.StarterGui:SetCore("SendNotification", {Title = "Link copied!", Text = "Free key on discord", Icon = "", Duration = 4})
+end)
+
+-- Scripts:
+
+local function OYLZ_fake_script() -- UserName.LocalScript 
+	local script = Instance.new('LocalScript', UserName)
+
+	local player = game.Players.LocalPlayer
+	if player then
+		script.Parent.Text = player.DisplayName
+	end
+	
+end
+coroutine.wrap(OYLZ_fake_script)()
